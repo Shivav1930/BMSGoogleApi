@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 343.398 s <<< FAILURE! - in TestSuite
+feature(cucumberRunnerTest.TestRunner)  Time elapsed: 320.927 s  <<< FAILURE!
+cucumber.runtime.CucumberException: 
+org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 289.00 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'DESKTOP-ITT84LQ', ip: '192.168.1.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.bt.bms, deviceScreenSize=1080x1920, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=4200cc386a65847f, platform=LINUX, deviceUDID=4200cc386a65847f, appActivity=com.movie.bms.splashscreen.SplashScreenActivity, desired={appPackage=com.bt.bms, appActivity=com.movie.bms.splashscreen.SplashScreenActivity, platformVersion=7.0, udid=4200cc386a65847f, platformName=Android, deviceName=Galaxy J7 Max}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G615F, udid=4200cc386a65847f, platformName=Android, deviceManufacturer=samsung}]
+Session ID: ed3e511d-51ed-478b-a710-ba13fe73f3b9
+*** Element info: {Using=xpath, value=//android.widget.EditText[contains(@resource-id,'com.bt.bms:id/et_search')and @text='Search for your city']}
+Caused by: org.openqa.selenium.NoSuchElementException: 
+An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 289.00 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'DESKTOP-ITT84LQ', ip: '192.168.1.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.bt.bms, deviceScreenSize=1080x1920, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=4200cc386a65847f, platform=LINUX, deviceUDID=4200cc386a65847f, appActivity=com.movie.bms.splashscreen.SplashScreenActivity, desired={appPackage=com.bt.bms, appActivity=com.movie.bms.splashscreen.SplashScreenActivity, platformVersion=7.0, udid=4200cc386a65847f, platformName=Android, deviceName=Galaxy J7 Max}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G615F, udid=4200cc386a65847f, platformName=Android, deviceManufacturer=samsung}]
+Session ID: ed3e511d-51ed-478b-a710-ba13fe73f3b9
+*** Element info: {Using=xpath, value=//android.widget.EditText[contains(@resource-id,'com.bt.bms:id/et_search')and @text='Search for your city']}
+
