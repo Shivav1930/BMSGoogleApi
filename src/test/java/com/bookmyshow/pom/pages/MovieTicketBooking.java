@@ -60,7 +60,7 @@ public class MovieTicketBooking extends BaseTest  {
 		WebDriverWait wait = new WebDriverWait((ThreadLocalDriver.getTLDriver()), 10);
 		  searchBar = (ThreadLocalDriver.getTLDriver()).findElement((By.id("com.bt.bms:id/et_search")));
 	    //wait.until(ExpectedConditions.visibilityOf(searchBar));
-	    
+	    System.out.println("Chittoor");
 	    searchBar.sendKeys("Chittoor");
 		
 		
