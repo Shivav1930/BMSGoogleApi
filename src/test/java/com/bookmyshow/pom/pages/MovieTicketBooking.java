@@ -135,21 +135,9 @@ public class MovieTicketBooking extends BaseTest  {
 		  BasePage.click("SelectSeats",test);
 		  Thread.sleep(2500);
 		  
-		  /*test.log(LogStatus.INFO, "Select the seats");
-		  BasePage.click("seatsS",test);*/
+		  test.log(LogStatus.INFO, "Select the seats");
+		  BasePage.click("seatsS",test);
 		  
-		  try {
-				if((ThreadLocalDriver.getTLDriver()).findElements(By.xpath("//android.view.ViewGroup[@index='5']")) != null){	
-					BasePage.click("seatsA",test);
-				}
-			
-			} catch (Exception e) {
-				test.log(LogStatus.INFO, "Click on submit");
-				BasePage.click("seatsS",test);
-				Thread.sleep(5000);
-				
-			}
-		 
 	
 		  test.log(LogStatus.INFO, "click on pay");
 		  BasePage.click("pay2",test);
