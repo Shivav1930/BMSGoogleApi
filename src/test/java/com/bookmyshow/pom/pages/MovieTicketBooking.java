@@ -20,53 +20,43 @@ public class MovieTicketBooking extends BaseTest  {
 
 	
 	public static void SelectEngLang(ExtentTest test) throws Exception{
-		//test.log(LogStatus.INFO, "click on Letsgo");
-		BasePage.click("Letsgo",test,(ThreadLocalDriver.getTLDriver()));
-		
-		/*test.log(LogStatus.INFO, "click on Letsgo");
-		BasePage.click("Letsgo",test);*/
+		test.log(LogStatus.INFO, "click on Letsgo");
+		BasePage.click("Letsgo",test);		
 		
 		test.log(LogStatus.INFO, "click on Skip");
-		BasePage.click("Skip",test,(ThreadLocalDriver.getTLDriver()));
+		BasePage.click("Skip",test);
 		
-		/*test.log(LogStatus.INFO, "click on Allow");
-		BasePage.click("Allow",test, driver);*/
-		Thread.sleep(5000);
-		
-		try {
-			if(driver.findElement (By.xpath("//android.widget.Button[@text='DENY']")) != null){	
-			 	
-				BasePage.click("Deny",test,(ThreadLocalDriver.getTLDriver()));
-			}
-		
-		} catch (Exception e) {
-			test.log(LogStatus.INFO, "Click on submit");
-			BasePage.click("ALLOW",test, (ThreadLocalDriver.getTLDriver()));
-			//e.printStackTrace();
-			Thread.sleep(5000);
+		Thread.sleep(2500);		
 			
-		}
+			if( (ThreadLocalDriver.getTLDriver()).findElements(By.xpath(BasePage.readobjectRepo("Allow"))).size() > 0){			 	
+				BasePage.click("Allow",test);		
 		
+			} else if((ThreadLocalDriver.getTLDriver()).findElements(By.xpath(BasePage.readobjectRepo("ALLOW"))).size() > 0) {
+			BasePage.click("ALLOW",test);
+			
+			}
+			
+
 	}
 	
 	public static void Movies(ExtentTest test) throws Exception {
-		/*WebElement ele ;33
-		ele= (ThreadLocalDriver.getTLDriver()).findElement(By.id("com.bt.bms:id/et_search"));
-		ele.click();
-		ele.sendKeys("Chittoor");*/
-		BasePage.click("Banglore",test, (ThreadLocalDriver.getTLDriver()));
-		Thread.sleep(5000);
-		WebElement searchBar ;
-		WebDriverWait wait = new WebDriverWait((ThreadLocalDriver.getTLDriver()), 10);
-		  searchBar = (ThreadLocalDriver.getTLDriver()).findElement((By.id("com.bt.bms:id/et_search")));
-	    //wait.until(ExpectedConditions.visibilityOf(searchBar));
-	    System.out.println("Chittoor");
-	    searchBar.sendKeys("Chittoor");
+	
+		BasePage.click("Banglore",test);
+		Thread.sleep(10000);
 		
+	/*	//
+		//WebElement searchBar ;
+		WebDriverWait wait = new WebDriverWait((ThreadLocalDriver.getTLDriver()), 10);
+		 // searchBar = (ThreadLocalDriver.getTLDriver()).findElement((By.id("com.bt.bms:id/et_search")));
+		 MobileElement searchBar = (MobileElement) ((ThreadLocalDriver.getTLDriver()).
+				 findElement(By.xpath("//android.widget.EditText[@resource-id='com.bt.bms:id/et_search']"))); 
+	    //wait.until(ExpectedConditions.visibilityOf(searchBar));	    
+	    searchBar.sendKeys("Chittoor");
+		//
+*/	    
 		
 		/*WebElement searchBar ;
-		 searchBar = (ThreadLocalDriver.getTLDriver()).findElement(By.id("com.bt.bms:id/et_search"));
-		 searchBar.click();
+		 searchBar = (ThreadLocalDriver.getTLDriver()).findElement(By.id("com.bt.bms:id/et_search"));		 
 		 searchBar.sendKeys("Chittoor");*/
 		
 	/*	try {
@@ -89,10 +79,10 @@ public class MovieTicketBooking extends BaseTest  {
 		
 		Thread.sleep(5000);
 		test.log(LogStatus.INFO, "click on Movies");
-		BasePage.click("Movies",test, (ThreadLocalDriver.getTLDriver()));
+		BasePage.click("Movies",test);
 		
 	    test.log(LogStatus.INFO, "Click on search url");
-	    BasePage.click("searchurl",test, (ThreadLocalDriver.getTLDriver()));
+	    BasePage.click("searchurl",test);
 	   
 	}
 	
@@ -103,7 +93,7 @@ public class MovieTicketBooking extends BaseTest  {
 	    
 	    Thread.sleep(2500);
 	    test.log(LogStatus.INFO, "Click on clickOnMovie");
-	    BasePage.click("clickOnMovie",test,(ThreadLocalDriver.getTLDriver()));
+	    BasePage.click("clickOnMovie",test);
 		}
 	
 	public static void EnterSecondMovieName(ExtentTest test) throws Exception {
@@ -113,55 +103,58 @@ public class MovieTicketBooking extends BaseTest  {
 	    
 	    Thread.sleep(2500);
 	    test.log(LogStatus.INFO, "Click on clickOnMovie");
-	    BasePage.click("clickOnMovie",test,(ThreadLocalDriver.getTLDriver()));
+	    BasePage.click("clickOnMovie",test);
 		}
 	
 	public static void Book(ExtentTest test) throws Exception {
 		Thread.sleep(2500); 
 		 test.log(LogStatus.INFO, "click on book the ticket");
-		 BasePage.click("Book",test,(ThreadLocalDriver.getTLDriver()));
+		 BasePage.click("Book",test);
 		 Thread.sleep(2500);
 		}
 
 	public static void DateTime(ExtentTest test) throws Exception {
 		  
 		  test.log(LogStatus.INFO, "click on the date");
-		  BasePage.click("Date",test,(ThreadLocalDriver.getTLDriver()));
+		  BasePage.click("Date",test);
 		  
 		  Thread.sleep(1500);
 		  test.log(LogStatus.INFO, "Select the Time as 10:00 PM");
-		  BasePage.click("Time",test,(ThreadLocalDriver.getTLDriver()));
+		  BasePage.click("Time",test);
 		}
 
 	public static void Tc(ExtentTest test) throws Exception {
 		  
 		  test.log(LogStatus.INFO, "Click on Accept");
-		  BasePage.click("Accept",test,(ThreadLocalDriver.getTLDriver()));
+		  BasePage.click("Accept",test);
 		}
 
 	public static void Selecttheseats(ExtentTest test) throws Exception {
 	
 		  test.log(LogStatus.INFO, "Select the number of seats as 2 and click to select the seats");
-		  BasePage.click("SelectSeats",test,(ThreadLocalDriver.getTLDriver()));
+		  BasePage.click("SelectSeats",test);
+		  Thread.sleep(2500);
 		  
-		  test.log(LogStatus.INFO, "Select the seats");
-		  BasePage.click("seats",test,(ThreadLocalDriver.getTLDriver()));
+		  /*test.log(LogStatus.INFO, "Select the seats");
+		  BasePage.click("seatsS",test);*/
 		  
-		  test.log(LogStatus.INFO, "click on pay");
-		  BasePage.click("pay2",test,(ThreadLocalDriver.getTLDriver()));
-		}
+		  try {
+				if((ThreadLocalDriver.getTLDriver()).findElements(By.xpath("//android.view.ViewGroup[@index='5']")) != null){	
+					BasePage.click("seatsA",test);
+				}
+			
+			} catch (Exception e) {
+				test.log(LogStatus.INFO, "Click on submit");
+				BasePage.click("seatsS",test);
+				Thread.sleep(5000);
+				
+			}
+		 
 	
-	public static void Selecttheseats1(ExtentTest test) throws Exception {
-		
-		  test.log(LogStatus.INFO, "Select the number of seats as 2 and click to select the seats");
-		  BasePage.click("SelectSeats",test,(ThreadLocalDriver.getTLDriver()));
-		  
-		  test.log(LogStatus.INFO, "Select the seats");
-		  BasePage.click("seats1",test,(ThreadLocalDriver.getTLDriver()));
-		  
 		  test.log(LogStatus.INFO, "click on pay");
-		  BasePage.click("pay2",test,(ThreadLocalDriver.getTLDriver()));
+		  BasePage.click("pay2",test);
 		}
+
 
 	public static void Details(ExtentTest test) throws Exception {	  
 		 		  
@@ -180,30 +173,11 @@ public class MovieTicketBooking extends BaseTest  {
 		 robot.keyRelease(KeyEvent.VK_ENTER);
 		 
 		 test.log(LogStatus.INFO, "click on pay");
-		  BasePage.click("Done",test,(ThreadLocalDriver.getTLDriver()));
+		  BasePage.click("Done",test);
 		 
 	}
 	
-	public static void Details1(ExtentTest test) throws Exception {	  
-		  
-		  
-		 test.log(LogStatus.INFO, "Enter your email id ");
-		 BasePage.enterText("Epath", "Email",test,(ThreadLocalDriver.getTLDriver()));
-		 
-		 test.log(LogStatus.INFO, "Enter the mobile number");
-		 BasePage.enterText("Npath", "number",test,(ThreadLocalDriver.getTLDriver()));		 
-		 
-		/* test.log(LogStatus.INFO, "click on pay");
-		  BasePage.click("DoneM1",test,driver);	*/
-		 
-		 Robot robot = new Robot();
-		 robot.keyPress(KeyEvent.VK_ENTER);
-		 robot.keyRelease(KeyEvent.VK_ENTER);
-		 
-		 test.log(LogStatus.INFO, "click on pay");
-		  BasePage.click("Done",test,(ThreadLocalDriver.getTLDriver()));
-		 
-	}
+	
 	
 
 	

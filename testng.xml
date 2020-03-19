@@ -12,8 +12,8 @@
     </classes>
   </test> 
   
- <!--  <test name="Test-LG-G4" parallel="classes" thread-count="5">
-  		<parameter name="udid" value="192.168.0.6:5657" />
+  <!-- <test name="Test-LG-G4" parallel="classes" thread-count="5">
+  		<parameter name="udid" value="2ed7a8b8" />
   		<parameter name="port" value="5000" />
         <parameter name="deviceName" value="Galaxy M30s" />
         <parameter name="platformVersion" value="9.0" />

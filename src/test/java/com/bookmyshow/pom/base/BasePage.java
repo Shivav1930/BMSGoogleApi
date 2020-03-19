@@ -111,10 +111,6 @@ public class BasePage extends BaseTest {
 	    */   
 	        //Method to retrieve value
 	        public static String readTestData(String key) throws IOException{
-//	        Map<String, String> m = setMapData().get("DataSheet");
-//	        String value = m.get(key);
-//	       
-//	        return value;
 	        	String value = "";
 	        	try {
 					 value =  SheetsQuickstart.readGoogleAPIData(key);
@@ -140,18 +136,14 @@ public class BasePage extends BaseTest {
 	    }    
 	    
 	   
-	    public static void click(String xpath, ExtentTest test,WebDriver driver) throws IOException, InterruptedException {
+	    public static void click(String xpath, ExtentTest test) throws IOException, InterruptedException {
 	        try {
-	           // waitForPresenceAndVisibilityOfElementry(readobjectRepo(xpath),driver);
-	        	WebElement ele ;
-	            
-	            if( xpath.equals("Kolkata1")) {
-	            	 ele = driver.findElement(
-	            			By.xpath("//android.widget.TextView[@text='Ahmedabad']"));
-	            }else {
-	            	ele = driver.findElement(By.xpath(readobjectRepo(xpath)));
-	            }
+	           
+	        	WebDriverWait wait = new WebDriverWait((ThreadLocalDriver.getTLDriver()), 10);
+	        	WebElement ele ;	            
+	        	ele = (ThreadLocalDriver.getTLDriver()).findElement(By.xpath(readobjectRepo(xpath)));
 	           test.log(LogStatus.PASS, "Click on  '" + ele.getText() + "' is successful");
+	           wait.until(ExpectedConditions.visibilityOf(ele));
 	            ele.click();
 	            Thread.sleep(1000);
 	        } catch (Exception e) {
